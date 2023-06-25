@@ -1,0 +1,601 @@
+#contact_modal {
+    display: none;
+}
+
+.photograph-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FAFAFA;
+    height: 300px;
+    
+    padding: 0px 30px;
+    margin: 0px 50px;
+
+}
+textarea {
+    width: 100%;
+    font-size: 1.375em;
+}
+
+input {
+    font-size: 1.25em;
+}
+
+.contact_button {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: white;
+    padding: 11px;
+    width: 170px;
+    height: 70px;
+    border: none;
+    background-color: #901C1C;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal {
+    border-radius: 5px;
+    background-color: #DB8876;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 25px;
+    left: 10%;
+    
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px;
+    margin: auto;
+}
+
+.modal header {
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-left:10px ;
+}
+
+.modal header img {
+    cursor: pointer;
+}
+
+.modal header h2 {
+    font-size: 3.75em;
+    font-weight: normal;
+    text-align: flex-start;
+   
+    
+}
+
+form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form label {
+    color: #312E2E;
+    font-size: 2.25em
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: self-start;
+    margin-bottom: 10px;
+}
+
+form input {
+    width: 100%;
+    height: 68px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.photograph-header h2 {
+    font-size: 1.375em;
+    font-weight: 500;
+    color:#901C1C ;
+}
+
+.photograph-header img {
+    width: 400px;
+    height: 200px;
+    
+}
+
+.photograph-header div {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.photograph-header h1{
+    color: #D3573C;
+    display: flex;
+    margin: 0px;
+    font-size: 2.5em
+}
+
+.photograph-header .img_container{
+    display: flex;
+    height: 200px;
+    width: 200px;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.photograph-header .align_text p {
+    line-height: 1.5;
+}
+
+
+.photographer-section {
+    
+    width: 100%;
+    margin-top: 30px;
+    justify-content: space-evenly;
+    display: flex;
+  
+    flex-wrap: wrap;
+    grid-row: 3;
+    grid-column: 3;
+    flex-direction: row;  
+}
+
+.photographer-section .items_container  {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+   
+    align-self: flex-start;
+    padding: 5px;
+    padding-bottom: 0px;
+    
+    
+}
+
+.photographer-section .items_container img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 2%;
+}
+
+.photographer-section .items_container video{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 2%;
+}
+
+
+
+
+
+
+.photographer-section .items_container .element_display{
+    width: 300px;
+    height: 60px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.photographer-section .items_container .element_display h2 {
+    display: flex;
+    font-weight: 300;
+    font-size: 1.4em;
+    color: #901C1C;
+    width: 250px;
+    justify-items: flex-start;
+    align-self: flex-start;
+    margin: 5px;
+    
+}
+
+.photographer-section .items_container .element_display p {
+    display: flex;
+    color: #901C1C;
+    margin: 0px;
+    margin-top: 10px;
+    font-size: 1.25em;
+    color: #312E2E;
+    line-height: 1.5;
+    
+    justify-self: end;
+    align-self: start;
+}
+
+.photographer-section .items_container .element_display .fa-heart{
+    display: flex;
+    color: #901C1C;
+    display: flex;
+    font-size:  1.56em;
+    align-self: flex-start;
+    justify-self: end;
+    margin-left:5px ;
+    margin-top: 12px;
+    transition: 0.5s;
+}
+
+.photographer-section .items_container .element_display .fa-heart.clicked {
+    color:red;
+    
+    margin-left: 10px;
+    transition: 0.3s;
+    transform: rotate(360deg) scale(1.5);
+    
+    
+}
+
+.photographer_wide{
+    padding: 50px 0px;
+    position: fixed;
+    inset: 0;
+    display: none;
+
+ 
+}
+
+.photographer_wide.open{
+    display:block;
+    
+}
+
+
+
+
+.photographer_wide .img_display{
+    width: 100%;
+    height: 100%;
+    
+    position: relative;
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.photographer_wide .img_display img {
+    width: calc(100% - 200px);
+    height: calc(100% - 100px);
+    object-fit: contain;
+    
+}
+
+.photographer_wide .img_display video {
+   
+    width: calc(100% - 200px);
+    height: calc(100% - 100px);
+    object-fit: contain;
+}
+
+.photographer_wide .fa-solid.fa-chevron-right{
+    color:#901C1C;
+    position: absolute;
+    right: 5%;
+    top:50%;
+    transform: translateY(-50%);
+    
+    font-size:  2.8em;
+}
+
+.photographer_wide .fa-solid.fa-chevron-left{ 
+    color:#901C1C;
+    margin-right: 20px;
+    
+    position: absolute;
+    left: 5%;
+    top:50%;
+    transform: translateY(-50%);
+
+    font-size:  2.8em;
+}
+
+.photographer_wide .fa-solid.fa-xmark{
+    color:#901C1C;
+    position: absolute;
+    
+    top:20px;
+    right: 20px;
+    
+    
+    font-size:2.5em;
+}
+
+.photographer_wide .align_name {
+    position: absolute;
+    left: 40%;
+    bottom: 7%
+    
+   
+    
+}
+
+.photographer_wide .align_name h1{
+    width: 100%;
+    display: flex;
+    position: relative;
+    left: -160px;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+.footer_container{
+    width: 240px;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    background-color: #DB8876;
+    align-self: flex-end;
+    
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    
+}
+
+.footer_container .footer_items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_container .footer_items .fa-heart{
+    justify-self: flex-start;
+    margin:auto;
+    position: relative;
+    
+    margin-left: -17px;
+}
+
+.footer_container .footer_items p{
+    font-size: 1.12em;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 1.5;
+}
+
+.filter_container
+{
+    margin-left: 20px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.filter_container label{
+    margin-top: 20px;
+    font-size: 1.625em;
+    margin-left: 35px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.filter_container .filter_type {
+    background-color:#901C1C;
+    display: flex;
+    color: white;
+    font-weight: 200;
+    border-radius: 5%;
+    flex-direction: column;
+    margin: 0px;
+    margin-top: 20px;
+    padding: 10px 15px;
+    width: 160px;
+    height: 44px;
+    font-size: 1.12em;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow:hidden;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.filter_container  .filter_type option{
+    display: flex;
+    color: white;
+    margin: 0px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    justify-content: start;
+    border: solid 5px;
+    font-size: 1.12em;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+ 
+
+.sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+
+
+@media all and (width < 430px)
+{
+    .photograph-header{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 0px;
+        margin: 0px;
+        
+    }
+
+    .align_text{
+        display: flex;
+        
+        align-items: center;
+    }
+
+    
+    
+    .align_text h1{
+        font-size: 2em;
+        margin-top: 15px;
+    }
+
+    .photograph-header{
+        justify-content:flex-start;
+        height: 370px;
+    }
+
+    .photograph-header .img_container{
+        margin-top: 20px;
+        border-radius: 75%;
+        width: 100px;
+        height: 100px;
+
+    
+    }
+
+    .photograph-header img{
+        height: 100px;
+        width: 100px;
+        
+     }
+
+    
+
+    .contact_button{
+        height: 50px;
+    }
+
+    .filter_container {
+        margin-left: 0px;
+        justify-content: center;
+    }
+
+    .photographer-section{
+        justify-content: center;
+    }
+
+    .footer_container{
+        width: auto;
+        height: 50px;
+    }
+
+    .photographer_wide .img_display img {
+        width: 200px;
+    }
+    .photographer_wide .align_name{
+       width: 100%;
+       
+        
+    }
+
+    .photographer_wide .align_name h1 {
+        width: 80%;
+        left: -50px;
+        display: flex;
+        justify-content: center;
+        
+
+        
+    }
+
+    .photographer_wide .fa-solid.fa-chevron-left{
+        top:42%
+    }
+
+    .photographer_wide .fa-solid.fa-chevron-right{
+        top:42%
+    }
+
+    .photographer_wide .align_name{
+        left: 17%;
+        bottom: 27%;
+    }
+
+    .photographer_wide .img_display video {
+        width: 200px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .modal{
+        left: 5%;
+        margin: auto;
+    }
+
+    .modal header{
+        flex-direction: row;
+        padding-bottom: 10px;
+        padding-top: 0px;
+    }
+
+    .modal header h2 {
+        font-size: 1.375em;
+        font-weight: 700;
+    }
+
+    .modal header img {
+        width: 35px;
+        margin-right: 15px;
+    }
+
+    form label{
+        font-size: 1em;
+    }
+
+    form input{
+        height: 40px;
+        width: 90%;
+    }
+
+    form textarea{
+        width: 90%;
+        height: 120px;
+    }
+
+    
+    
+}
+
+@media all and (width < 768px ) and (width > 430px)
+{
+    .photograph-header .img_container {
+       width: 200px;
+       height: 100px;
+       
+    }
+
+    .photograph-header img{
+       height: 100px;
+       width: 100px;
+       
+    }
+}
+

@@ -1,0 +1,158 @@
+@import url("photographer.css");
+
+body {
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+h1 {
+    color: #901C1C;
+    margin-right: 100px;
+}
+
+.logo {
+    height: 50px;
+    margin-left: 100px;
+}
+
+.photographer_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 70px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.photographer_section article {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.photographer_section article h2 {
+    display: flex;
+    color: #D3573C;
+    font-size: 32px;
+    margin-bottom: 0px;
+    justify-content: center;
+    
+}
+
+.photographer_section article .img_container{
+    display: flex;
+    height: 200px;
+    width: 200px;
+    justify-content: center;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+.photographer_section article img {
+    width: 1000%;
+    transform: scale(1.2);
+    
+ 
+}
+.photographer_section article p {
+    margin: 0px;
+    font-size: 14px;
+}
+
+.photographer_section article h2.city{
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    color:#b13418
+}
+
+.photographer_section article p.price {
+    color: gray;
+}
+
+.photographer_section article a{
+    text-decoration: none;
+    overflow: hidden;
+    
+   
+}
+
+@media all and (width < 430px){
+    header{
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    header > a{
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+        
+    }
+
+    .logo{
+        margin: 0px;
+    }
+
+    h1{
+        margin: 0px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+       
+        width: 100%;
+    }
+
+    .main{
+        width: 100%;
+    }
+
+    .photographer_section{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .photographer_section article img{
+        object-fit: contain;
+        transform: scale(1.4);
+    }
+
+    a{
+        width: 100%;
+    }
+
+    
+    .photographer_section article .img_container{
+        object-fit: contain;
+        width:185px;
+        border-radius: 50%;
+      
+        
+    }
+
+    
+   
+   
+
+
+}
