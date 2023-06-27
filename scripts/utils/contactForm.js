@@ -10,6 +10,11 @@ function displayModal() {
     
     
 }
+//CODE AJOUTE -------------------------------------------
+const close_Modal = document.getElementById("close_modal");
+close_Modal.addEventListener("click" , closeModal);
+//FIN CODE AJOUTE -------------------------------------------
+
 
 function closeModal() {
     const modal = document.getElementById("contact_modal");

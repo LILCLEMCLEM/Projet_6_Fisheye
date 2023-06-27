@@ -12,7 +12,7 @@ function photographerFactory(data) {
 
         //traitement image
         const img = document.createElement( 'img' );
-        img.setAttribute("src", picture)
+        img.setAttribute("src", picture);
         img.setAttribute("alt", "photographes");
         img.setAttribute("aria-label" , "image du photographe , lien vers la page du photographe")
 

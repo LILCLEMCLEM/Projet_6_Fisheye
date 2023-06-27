@@ -1,3 +1,6 @@
+/*CODE AJOUTE -------------------------------------------
+la classe "CreateContent()" prend en paramètres "title" en + , afin de l'ajouter aux images en tant que attribut "alt"
+*/
 function photographer_medias() {
 
     async function getPhotographersInfos() {
@@ -17,8 +20,46 @@ function photographer_medias() {
         return param.get("id");
         
     }
-    
-    
+
+    //CODE AJOUTE -------------------------------------------
+    const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+
+    document.getElementById("contact_button").addEventListener("click", function(event){
+        event.preventDefault()
+        let err = false;
+        const prenom = document.getElementById("prenom");
+        if(prenom.value == "") {
+           err = true
+        }
+
+        const nom = document.getElementById("nom");
+        if(nom.value == "") {
+            err = true
+        }
+
+        const email = document.getElementById("email");
+        if(email.value == "") {
+            err = true
+        }
+        if (!regex.test(String(email.value).toLowerCase()))
+        {
+            err = true
+        }
+
+        const message = document.getElementById("message");
+        if(message.value == "") {
+            err = true
+        }
+
+        //log 
+        if(err == true) {
+            alert("erreur champs vide et/ou email incorrect")
+        } else {
+            console.table(prenom.value , nom.value , email.value , message.value)
+        }
+        
+      });
+    //FIN CODE AJOUTE -------------------------------------------------
 
 
     async function display_header(){
@@ -245,7 +286,7 @@ function photographer_medias() {
     //afficher la galerie du photographe
 
 
-function CreateContent(content, p_name, vid) {   
+function CreateContent(content, p_name, vid , title) {   
     let extension = null;
     let items_img;
     
@@ -263,11 +304,11 @@ function CreateContent(content, p_name, vid) {
         
         items_img.setAttribute("loop" , "");
         items_img.setAttribute("muted" , "");
-        items_img.setAttribute("alt" , "photo");
+        
     }
     else{
         items_img = document.createElement("img");
-        items_img.setAttribute("alt" , "photo");
+        items_img.setAttribute("alt" , title);
         items_img.src = "data/" + p_name.split(" ")[0].replace(/-/g,' ') + "/" + content;
     }
 
@@ -423,7 +464,7 @@ function show_items(photographer_data, name, elem_id){
       
     items_name.textContent = photographer_data[index].title;
     
-    const Wide_img = CreateContent(photographer_data[index].image , name , photographer_data[index].video);
+    const Wide_img = CreateContent(photographer_data[index].image , name , photographer_data[index].video , photographer_data[index].title);
     
     
     Wide_Container.appendChild(previous_img);
@@ -448,7 +489,7 @@ function show_items(photographer_data, name, elem_id){
             Container.setAttribute("class" , "items_container");
             
             //fonction pour déterminer si c'est une image ou une video
-            const items_img = CreateContent(image , _name , video);
+            const items_img = CreateContent(image , _name , video , title);
             items_img.setAttribute("tabindex" , "0")
             items_img.addEventListener('keydown', (event) => {
                 if(event.code === 'Enter') {
